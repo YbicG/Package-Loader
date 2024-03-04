@@ -23,3 +23,24 @@ utils = loader.import_("utilities")
 
 print(utils.libs.colors.red("hi"))
 ```
+
+### The package directory has to have folders layed out like this:
+
+```
+PackageDir/
+|-- Testing Package 1/
+|   |-- tests.py
+|   |-- whatever.md
+|   |-- testing_package/
+|   |   |-- whatever/
+|   |   |   |-- whatever.wtv
+|   |   |-- __init__.py
+|-- Testing Package 2/
+|   |-- tests.py
+|   |-- whatever.md
+|   |-- testing_package_2/
+|   |   |-- whatever/
+|   |   |   |-- whatever.wtv
+|   |   |-- __init__.py
+```
+`testing_packge` and `testing_package_2` are the names of the packages, and `__init__.py` is what will be loaded when imported.
